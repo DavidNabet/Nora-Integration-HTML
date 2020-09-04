@@ -1,0 +1,26 @@
+{
+  "name": "htms-css-hero-two",
+  "version": "0.0.1",
+  "description": "Banner hero animation in gsap & scrollmagic",
+  "main": "index.js",
+  "scripts": {
+    "watch": "node-sass -w css/style.scss css/style.css",
+    "build": "nodemon --exec babel-node ./js/server.js",
+    "start": "concurrently \"npm run watch\" \"npm run build\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.10.5",
+    "@babel/core": "^7.11.1",
+    "@babel/node": "^7.10.5",
+    "@babel/preset-env": "^7.11.0",
+    "nodemon": "^2.0.4"
+  },
+  "dependencies": {
+    "concurrently": "^5.3.0",
+    "gsap": "^3.4.2",
+    "node-sass": "^4.14.1"
+  }
+}
