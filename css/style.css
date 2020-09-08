@@ -573,6 +573,8 @@ html, body {
             @media (max-width: 960px) {
               .banner .banner-inner .content .content-inner h1 .line {
                 height: auto; } }
+            .banner .banner-inner .content .content-inner h1 .line span {
+              position: absolute; }
         .banner .banner-inner .content .content-inner p {
           font-size: 1.125rem;
           line-height: 2.25rem;

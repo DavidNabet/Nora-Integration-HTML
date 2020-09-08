@@ -60,6 +60,9 @@
                         @media (max-width: $laptop) {
                             height: auto;
                         }
+                        span {
+                            position: absolute;
+                        }
                     }
                 }
                 p {
