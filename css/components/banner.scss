@@ -24,27 +24,41 @@
         height: 70vh;
         display: flex;
         position: relative;
+        @media (max-width: $widescreen) {
+            height: auto;
+        }
         .content {
             display: flex;
             align-items: center;
             .content-inner {
+                width: auto;
+                @media (max-width: $desktop){
+                    width: 60%;
+                }
                 h1 {
                     font-family: 'Bodoni SvtyTwo ITC TT';
                     color: $blueTitle;
                     font-size: 4rem;
                     line-height: 5rem;
                     margin: 32px 0 0;
-                    width: 620px;
-                    // @media (max-width: $widescreen) {
-                    //     font-size: 3.1rem;
-                    //     line-height: 3.6rem;
-                    // }
+                    @media (max-width: $desktop) {
+                        font-size: 3rem;
+                        line-height: 3rem;
+                    }
+                    @media (max-width: $laptop) {
+                        font-size: 3.15rem;
+                        line-height: 3.5rem;
+                        margin: auto;
+                    }
                     .line {
                         overflow: hidden;
                         height: 80px;
                         position: relative;
-                        span {
-                            position: absolute;
+                        @media (max-width: $desktop) {
+                            height: 60px;
+                        }
+                        @media (max-width: $laptop) {
+                            height: auto;
                         }
                     }
                 }
@@ -55,8 +69,17 @@
                     color: $orange;
                     width: 520px;
                     margin: 32px 0 40px;
+                    @media (max-width: $widescreen){
+                        font-size: 1.02rem;
+                    }
                     @media (max-width: $desktop) {
                         margin: 16px 0 40px;
+                        font-size: 1rem;
+                        width: calc(520px / 2);
+                        line-height: 2rem;
+                    }
+                    @media (max-width: $laptop) {
+                        margin: 20px auto;
                     }
                 }
                 .play-video {
@@ -67,12 +90,18 @@
                     overflow: hidden;
                     max-width: 58px;
                     box-shadow: 0px 1px 5px .5px #ffa66d;
+                    @media (max-width: $desktop){
+                        max-width: 48px;
+                    }
                     .cover {
                         padding: 0;
                         background: linear-gradient(94deg, #FFA66D, #F8528D);
                         right: 0;
                         z-index: 9;
                         height: 58px;
+                        @media (max-width: $desktop){
+                            height: 48px;
+                        }
                     }
                     span {
                         position: absolute;
@@ -81,14 +110,25 @@
                         display: flex;
                         align-items: center;
                         height: 58px;
-                        padding: 0 26px;
+                        padding: 0 25px;
                         background: $white;
                         font-weight: 600;
+                        @media (max-width: $desktop){
+                            height: 48px;
+                            padding: 0 20px;                        }
                         img {
-                            margin-left: -2px;
                             z-index: 15;
                         }
                     }
+                }
+            }
+            .banner-img {
+                display: none;
+                width: 100%;
+                max-width: 100%;
+                margin: auto;
+                @media (max-width: $desktop){
+                    display: block;
                 }
             }
         }    

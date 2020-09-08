@@ -303,7 +303,10 @@ template {
 [hidden] {
   display: none; }
 
-body {
+html, body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
   font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif; }
 
 .is-column {
@@ -312,7 +315,10 @@ body {
 .container {
   width: 1345px;
   min-width: 1345px;
-  margin: 0 auto; }
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 16px;
+  padding-left: 16px; }
   @media (max-width: 1440px) {
     .container {
       width: 1153px;
@@ -336,7 +342,12 @@ body {
   .container .row {
     display: flex;
     align-items: center;
-    padding: 0 16px; }
+    flex-wrap: wrap;
+    margin-right: -16px;
+    margin-left: -16px; }
+    @media (max-width: 1220px) {
+      .container .row {
+        margin: 0 -8px; } }
 
 .container-fluid {
   padding: 0 48px; }
@@ -347,15 +358,9 @@ body {
 
 main {
   display: block; }
-  main .slide-bg {
-    background: url("../../images/img-banner.svg") center right no-repeat;
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    height: 100%;
-    background-size: 55% 100%; }
+  @media (max-width: 1440px) {
+    main {
+      position: relative; } }
   main header {
     width: 100%;
     height: 100px;
@@ -387,6 +392,9 @@ main {
         justify-content: flex-start;
         width: 60%;
         margin: 0 auto; }
+        @media (max-width: 1220px) {
+          main header .container-fluid .header-inner .navigation {
+            width: 50%; } }
         main header .container-fluid .header-inner .navigation nav ul {
           display: flex;
           align-items: center;
@@ -453,7 +461,10 @@ main {
             main header .container-fluid .header-inner .nav-sign .apply a {
               padding: 0 24px; } }
 
-body {
+html, body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
   font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif; }
 
 .is-column {
@@ -462,7 +473,10 @@ body {
 .container {
   width: 1345px;
   min-width: 1345px;
-  margin: 0 auto; }
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 16px;
+  padding-left: 16px; }
   @media (max-width: 1440px) {
     .container {
       width: 1153px;
@@ -486,7 +500,12 @@ body {
   .container .row {
     display: flex;
     align-items: center;
-    padding: 0 16px; }
+    flex-wrap: wrap;
+    margin-right: -16px;
+    margin-left: -16px; }
+    @media (max-width: 1220px) {
+      .container .row {
+        margin: 0 -8px; } }
 
 .container-fluid {
   padding: 0 48px; }
@@ -518,59 +537,105 @@ body {
     height: 70vh;
     display: flex;
     position: relative; }
+    @media (max-width: 1440px) {
+      .banner .banner-inner {
+        height: auto; } }
     .banner .banner-inner .content {
       display: flex;
       align-items: center; }
-      .banner .banner-inner .content .content-inner h1 {
-        font-family: 'Bodoni SvtyTwo ITC TT';
-        color: #1b429a;
-        font-size: 4rem;
-        line-height: 5rem;
-        margin: 32px 0 0;
-        width: 620px; }
-        .banner .banner-inner .content .content-inner h1 .line {
-          overflow: hidden;
-          height: 80px;
-          position: relative; }
-          .banner .banner-inner .content .content-inner h1 .line span {
-            position: absolute; }
-      .banner .banner-inner .content .content-inner p {
-        font-size: 1.125rem;
-        line-height: 2.25rem;
-        font-weight: 300;
-        color: #ffa05a;
-        width: 520px;
-        margin: 32px 0 40px; }
+      .banner .banner-inner .content .content-inner {
+        width: auto; }
         @media (max-width: 1220px) {
-          .banner .banner-inner .content .content-inner p {
-            margin: 16px 0 40px; } }
-      .banner .banner-inner .content .content-inner .play-video {
-        position: relative;
-        bottom: 0;
-        left: 0;
-        border-radius: 100px;
-        overflow: hidden;
-        max-width: 58px;
-        box-shadow: 0px 1px 5px .5px #ffa66d; }
-        .banner .banner-inner .content .content-inner .play-video .cover {
-          padding: 0;
-          background: linear-gradient(94deg, #FFA66D, #F8528D);
-          right: 0;
-          z-index: 9;
-          height: 58px; }
-        .banner .banner-inner .content .content-inner .play-video span {
-          position: absolute;
-          top: 0;
+          .banner .banner-inner .content .content-inner {
+            width: 60%; } }
+        .banner .banner-inner .content .content-inner h1 {
+          font-family: 'Bodoni SvtyTwo ITC TT';
+          color: #1b429a;
+          font-size: 4rem;
+          line-height: 5rem;
+          margin: 32px 0 0; }
+          @media (max-width: 1220px) {
+            .banner .banner-inner .content .content-inner h1 {
+              font-size: 3rem;
+              line-height: 3rem; } }
+          @media (max-width: 960px) {
+            .banner .banner-inner .content .content-inner h1 {
+              font-size: 3.15rem;
+              line-height: 3.5rem;
+              margin: auto; } }
+          .banner .banner-inner .content .content-inner h1 .line {
+            overflow: hidden;
+            height: 80px;
+            position: relative; }
+            @media (max-width: 1220px) {
+              .banner .banner-inner .content .content-inner h1 .line {
+                height: 60px; } }
+            @media (max-width: 960px) {
+              .banner .banner-inner .content .content-inner h1 .line {
+                height: auto; } }
+        .banner .banner-inner .content .content-inner p {
+          font-size: 1.125rem;
+          line-height: 2.25rem;
+          font-weight: 300;
+          color: #ffa05a;
+          width: 520px;
+          margin: 32px 0 40px; }
+          @media (max-width: 1440px) {
+            .banner .banner-inner .content .content-inner p {
+              font-size: 1.02rem; } }
+          @media (max-width: 1220px) {
+            .banner .banner-inner .content .content-inner p {
+              margin: 16px 0 40px;
+              font-size: 1rem;
+              width: calc(520px / 2);
+              line-height: 2rem; } }
+          @media (max-width: 960px) {
+            .banner .banner-inner .content .content-inner p {
+              margin: 20px auto; } }
+        .banner .banner-inner .content .content-inner .play-video {
+          position: relative;
+          bottom: 0;
           left: 0;
-          display: flex;
-          align-items: center;
-          height: 58px;
-          padding: 0 26px;
-          background: #ffffff;
-          font-weight: 600; }
-          .banner .banner-inner .content .content-inner .play-video span img {
-            margin-left: -2px;
-            z-index: 15; }
+          border-radius: 100px;
+          overflow: hidden;
+          max-width: 58px;
+          box-shadow: 0px 1px 5px .5px #ffa66d; }
+          @media (max-width: 1220px) {
+            .banner .banner-inner .content .content-inner .play-video {
+              max-width: 48px; } }
+          .banner .banner-inner .content .content-inner .play-video .cover {
+            padding: 0;
+            background: linear-gradient(94deg, #FFA66D, #F8528D);
+            right: 0;
+            z-index: 9;
+            height: 58px; }
+            @media (max-width: 1220px) {
+              .banner .banner-inner .content .content-inner .play-video .cover {
+                height: 48px; } }
+          .banner .banner-inner .content .content-inner .play-video span {
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: flex;
+            align-items: center;
+            height: 58px;
+            padding: 0 25px;
+            background: #ffffff;
+            font-weight: 600; }
+            @media (max-width: 1220px) {
+              .banner .banner-inner .content .content-inner .play-video span {
+                height: 48px;
+                padding: 0 20px; } }
+            .banner .banner-inner .content .content-inner .play-video span img {
+              z-index: 15; }
+      .banner .banner-inner .content .banner-img {
+        display: none;
+        width: 100%;
+        max-width: 100%;
+        margin: auto; }
+        @media (max-width: 1220px) {
+          .banner .banner-inner .content .banner-img {
+            display: block; } }
   .banner .pagination {
     display: flex;
     align-self: flex-start;
@@ -593,3 +658,73 @@ body {
       .banner .pagination .dots-active {
         background: #29558c;
         padding-left: 10px; }
+
+html, body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif; }
+
+.is-column {
+  flex-direction: column; }
+
+.container {
+  width: 1345px;
+  min-width: 1345px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 16px;
+  padding-left: 16px; }
+  @media (max-width: 1440px) {
+    .container {
+      width: 1153px;
+      min-width: 1153px; } }
+  @media (max-width: 1220px) {
+    .container {
+      width: 961px;
+      min-width: 961px; } }
+  @media (max-width: 960px) {
+    .container {
+      width: 767px;
+      min-width: 767px; } }
+  @media (max-width: 768px) {
+    .container {
+      width: 481px;
+      min-width: 481px; } }
+  @media (max-width: 480px) {
+    .container {
+      width: 320px;
+      min-width: 320px; } }
+  .container .row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-right: -16px;
+    margin-left: -16px; }
+    @media (max-width: 1220px) {
+      .container .row {
+        margin: 0 -8px; } }
+
+.container-fluid {
+  padding: 0 48px; }
+  .container-fluid .row {
+    display: flex;
+    align-items: center;
+    padding: 0 16px; }
+
+.slide-bg {
+  background: url("../../images/img-banner.svg") center right no-repeat;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  background-size: contain; }
+  @media (max-width: 1440px) {
+    .slide-bg {
+      right: 3%; } }
+  @media (max-width: 1220px) {
+    .slide-bg {
+      display: none;
+      right: 0; } }

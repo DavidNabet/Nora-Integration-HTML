@@ -1,16 +1,8 @@
 @import "../variables.scss";
 main {
     display: block;
-   .slide-bg {
-        background: url("../../images/img-banner.svg") center right no-repeat;
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        height: 100%;
-        background-size: 55% 100%;
-
+    @media (max-width: $widescreen) {
+        position: relative;
     }
     header {
         width: 100%;
@@ -46,6 +38,9 @@ main {
                     justify-content: flex-start;
                     width: 60%;
                     margin: 0 auto;
+                    @media (max-width: $desktop){
+                        width: 50%;
+                    }
                     nav {
                         ul {
                             display: flex;
