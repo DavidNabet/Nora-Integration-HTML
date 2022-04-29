@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "watch": "node-sass -w css/style.scss css/style.css",
-    "build": "nodemon --exec babel-node ./js/server.js",
+    "build": "npx nodemon --exec babel-node ./js/server.js",
     "start": "concurrently \"npm run watch\" \"npm run build\""
   },
   "keywords": [],
@@ -15,8 +15,7 @@
     "@babel/cli": "^7.10.5",
     "@babel/core": "^7.11.1",
     "@babel/node": "^7.10.5",
-    "@babel/preset-env": "^7.11.0",
-    "nodemon": "^2.0.4"
+    "@babel/preset-env": "^7.11.0"
   },
   "dependencies": {
     "concurrently": "^5.3.0",

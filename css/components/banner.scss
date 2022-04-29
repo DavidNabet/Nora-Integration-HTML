@@ -1,6 +1,6 @@
 @import "../variables.scss";
 .banner {
-    position: relative;
+    // position: relative;
     .banner-addition-bg {
         background: $blue;
         position: absolute;
@@ -23,7 +23,7 @@
         width: 100%;
         height: 70vh;
         display: flex;
-        position: relative;
+        // position: relative;
         @media (max-width: $widescreen) {
             height: auto;
         }
@@ -125,15 +125,15 @@
                     }
                 }
             }
-            .banner-img {
-                display: none;
-                width: 100%;
-                max-width: 100%;
-                margin: auto;
-                @media (max-width: $desktop){
-                    display: block;
-                }
-            }
+            // .banner-img {
+            //     display: none;
+            //     width: 100%;
+            //     max-width: 100%;
+            //     margin: auto;
+            //     @media (max-width: $desktop){
+            //         display: block;
+            //     }
+            // }
         }    
     }
     .pagination {
